@@ -1,15 +1,23 @@
 <html>
 <body>
+
+
 <head>
     <title>
         Titulo_de_Pagina_teste
     </title>
-
     <div>
-        <h1>
-            Primeiro_Titulo
-        </h1>
+        <h1><a href="/">Iluminate</a></h1>
     </div>
+
+    {% for post in posts %}
+        <div>
+            <p>publicado em: {{post.published_date }}</p>
+            <h1><a href="">{{post.title}}</a></h1>
+            <p> {{post.text|linebreaksbr}} </p>
+        </div>
+    {% endfor %}
+
 </head>
 </body>
 </html>
